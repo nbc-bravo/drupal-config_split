@@ -115,8 +115,6 @@ class ConfigSplitEntityForm extends EntityForm {
       '#multiple' => TRUE,
       '#default_value' => array_keys($config->get('theme')),
     ];
-    // At this stage we do not support themes. @TODO: support themes.
-    $form['blacklist_fieldset']['theme']['#access'] = FALSE;
     // @codingStandardsIgnoreEnd
 
     $options = array_combine($this->configFactory()->listAll(), $this->configFactory()->listAll());
